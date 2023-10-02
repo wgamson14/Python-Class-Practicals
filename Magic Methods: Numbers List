@@ -1,0 +1,92 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN9VMht8d6oS2hhIE+WQxA1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/wgamson14/Python-Class-Practicals/blob/main/Magic%20Methods%3A%20Numbers%20List\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e4uMP55BPnDi",
+        "outputId": "6ae1dac1-2ab5-49ba-b4ba-78bf3ba0db22"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The list of numbers is [1, 2, 3, 4, 5, 6]\n",
+            "[1, 2, 3, 4, 5, 6, 4, 6, 9, 8]\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ],
+      "source": [
+        "class Vector:\n",
+        "  def __init__(self, vector1):\n",
+        "    self.vector1 = vector1\n",
+        "\n",
+        "  def __repr__(self):\n",
+        "    print(f'The list of numbers is {self.vector1}')\n",
+        "\n",
+        "  def concatenated_vectors(self, vector2):\n",
+        "    print(self.vector1 + vector2)\n",
+        "\n",
+        "  def __getitem__(self, idx):\n",
+        "    return self.vector1[idx]\n",
+        "\n",
+        "\n",
+        "my_list = Vector([1, 2, 3, 4, 5, 6])\n",
+        "my_list.__repr__()\n",
+        "\n",
+        "my_list.concatenated_vectors([4, 6, 9, 8])\n",
+        "\n",
+        "my_list.__getitem__(4)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "n4Up0-pJRtRn"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
