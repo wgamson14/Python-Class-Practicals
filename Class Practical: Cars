@@ -1,0 +1,108 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNvYZE6kiTfKatgVaVyhphO",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/wgamson14/Python-Class-Practicals/blob/main/Class%20Practical%3A%20Cars\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 21,
+      "metadata": {
+        "id": "RvGdOZ1H-iuq"
+      },
+      "outputs": [],
+      "source": [
+        "class Car:\n",
+        "  def __init__(self, model, year):\n",
+        "    self.model = model\n",
+        "    self.year = year\n",
+        "    self.miles_driven = 0\n",
+        "\n",
+        "  def drive(self):\n",
+        "    self.miles_driven += 1\n",
+        "    print(\"vroom\")\n",
+        "\n",
+        "  def info(self):\n",
+        "    print(f'The car has driven {self.miles_driven} miles. Model Name: {self.model}. Year: {self.year}')\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_car = Car(\"Tesla\", 2019)\n",
+        "\n",
+        "my_car.drive()\n",
+        "my_car.drive()\n",
+        "my_car.drive()\n",
+        "my_car.drive()\n",
+        "my_car.drive()\n",
+        "\n",
+        "my_car.info()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cUx43qqO-jgo",
+        "outputId": "934f8a1a-9311-49ac-c01d-ba94bdb465b2"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "vroom\n",
+            "vroom\n",
+            "vroom\n",
+            "vroom\n",
+            "vroom\n",
+            "The car has driven 5 miles. Model Name: Tesla. Year: 2019\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "FsUSO7NQ-pjr"
+      },
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "whzfQWA8-q7s"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
