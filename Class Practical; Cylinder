@@ -1,0 +1,103 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPfD9wRwH6KFqn1D0Zgamqz",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/wgamson14/Python-Class-Practicals/blob/main/Class%20Practical%3B%20Cylinder\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 23,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RvGdOZ1H-iuq",
+        "outputId": "acf9dac5-b633-4862-9ca6-98d6de94403e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "94.25\n",
+            "56.55\n"
+          ]
+        }
+      ],
+      "source": [
+        "from math import pi\n",
+        "\n",
+        "class Cylinder:\n",
+        "    def __init__(self, height, radius):\n",
+        "        self.height = height\n",
+        "        self.radius = radius\n",
+        "        self.surface_area = None\n",
+        "        self.volume = None\n",
+        "\n",
+        "    def get_surface_area(self):\n",
+        "        return 2 * pi * self.radius * (self.height + self.radius)\n",
+        "\n",
+        "    def get_volume(self):\n",
+        "      return pi * self.radius ** 2 * self.height\n",
+        "\n",
+        "\n",
+        "\n",
+        "my_cylinder = Cylinder(2, 3)\n",
+        "print(round(my_cylinder.get_surface_area(), 2))\n",
+        "\n",
+        "print(round(my_cylinder.get_volume(), 2))\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "cUx43qqO-jgo"
+      },
+      "execution_count": 23,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "FsUSO7NQ-pjr"
+      },
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "whzfQWA8-q7s"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
