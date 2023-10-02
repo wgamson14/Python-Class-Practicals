@@ -1,0 +1,64 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNlQkIAT4A7J0ktLcnuFzsT",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/wgamson14/Python-Class-Practicals/blob/main/Class%20Practical%3A%20Phones\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "V3U4ObcuMxXT"
+      },
+      "outputs": [],
+      "source": [
+        "class Phone:\n",
+        "  def __init__(self, number, balance):\n",
+        "    self.number = number\n",
+        "    self.balance = balance\n",
+        "\n",
+        "  def make_call(self, duration):\n",
+        "    if self.balance >= duration:\n",
+        "      self.balance = self.balance - duration\n",
+        "      print(f'Calling {self.number} for {duration} minutes.')\n",
+        "    else:\n",
+        "      print(\"Insufficient balance to make call\")\n",
+        "\n",
+        "  def info(self):\n",
+        "    print(f'{self.number}. {self.balance} minutes remaining.')\n",
+        "\n",
+        "\n",
+        "my_phone = Phone(+447859375480, 20)\n",
+        "\n",
+        "my_phone.make_call(5)\n",
+        "my_phone.make_call(5)\n",
+        "\n",
+        "my_phone.info()\n",
+        "\n",
+        "my_phone.make_call(12)"
+      ]
+    }
+  ]
+}
