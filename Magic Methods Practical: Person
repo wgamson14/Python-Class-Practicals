@@ -1,0 +1,186 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPZLpRDK6ZPzb2BK3zUBcfB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/wgamson14/Python-Class-Practicals/blob/main/Magic%20Methods%20Practical%3A%20Person\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "id": "e4uMP55BPnDi"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(self, name, DOB, friends):\n",
+        "    self.name = name\n",
+        "    self.DOB = DOB\n",
+        "    self.friends = friends\n",
+        "\n",
+        "  def __str__(self):\n",
+        "    return f'My name is {self.name}, I was born on {self.DOB} and I have {len(self.friends)} friends.'\n",
+        "\n",
+        "  def __gt__(self, DOB_2, name_2):\n",
+        "    if self.DOB[0] < DOB_2[0]:\n",
+        "      print(f'{self.name} is older')\n",
+        "    elif self.DOB[0] > DOB_2[0]:\n",
+        "      print(f'{name_2} is older')\n",
+        "    elif self.DOB[0] == DOB_2[0]:\n",
+        "      if self.DOB[1] < DOB_2[1]:\n",
+        "        print(f'{self.name} is older')\n",
+        "      elif self.DOB[1] > DOB_2[1]:\n",
+        "        print(f'{name_2} is older')\n",
+        "      elif self.DOB[1] == DOB_2[1]:\n",
+        "        if self.DOB[2] < DOB_2[2]:\n",
+        "          print(f'{self.name} is older but their birthdays are in the same month')\n",
+        "        elif self.DOB[2] > DOB_2[2]:\n",
+        "          print(f'{name_2} is older but their birthdays are in the same month')\n",
+        "        else:\n",
+        "          print('Their birthdays are on exactly the same day')\n",
+        "\n",
+        "  def add_friend(self, new_friend):\n",
+        "    (self.friends).append(new_friend)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "n4Up0-pJRtRn"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_person = Person(\"Owen\", [2000, 10, 22], [\"Jason\", \"Dylan\", \"Charlie\", \"Jim\", \"Muskett\"])\n",
+        "\n",
+        "my_person.__str__()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "7k9m0DjdWb54",
+        "outputId": "e481fac9-c8e0-4245-fa17-a5cd7962b9ed"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'My name is Owen, I was born on [2000, 10, 22] and I have 5 friends.'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_person.__gt__([2000, 10, 22], \"Will\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PTKb3kANWnig",
+        "outputId": "fbb1e459-b46b-4efe-a8cd-6ba41c41764c"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Their birthdays are on exactly the same day\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_person.add_friend(\"Will\")\n"
+      ],
+      "metadata": {
+        "id": "LkWgDtv3nNS-"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_person.__str__()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "nZlLoauDomBh",
+        "outputId": "2c1726a3-1726-4db9-9c73-752c9adefab3"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'My name is Owen, I was born on [2000, 10, 22] and I have 6 friends.'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "XeYCGxuDpTw8"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
